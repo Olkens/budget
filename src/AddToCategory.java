@@ -6,9 +6,10 @@ public class AddToCategory implements CategoryMethods {
     CategoriesList other = new CategoriesList();
     CategoriesList all = new CategoriesList();
 
-    public AddToCategory(int categoryInput){
+    public AddToCategory(int categoryInput) {
         addToCategory(categoryInput);
     }
+
     protected void addToCategory(int categoryInput) {
         switch (categoryInput) {
             case 1:
@@ -24,14 +25,18 @@ public class AddToCategory implements CategoryMethods {
 
     public void addToFood() {
         food.addToList("mleko", 24.44);
-        for(String f : food.list.keySet()) {
-            System.out.println(f+ " = " + food.list.get(f));
+        for (String f : food.list.keySet()) {
+            System.out.println(f + " = " + food.list.get(f));
         }
         System.out.println(food.list);
     }
 
     protected void addToClothes() {
         clothes.addToList("spodnie", 4.55);
-        System.out.println(clothes);
+        for (String f : clothes.list.keySet()) {
+            System.out.println(f + " = " + clothes.list.get(f));
+        }
+        System.out.println(clothes.list);
     }
+
 }
