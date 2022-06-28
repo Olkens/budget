@@ -24,8 +24,8 @@ public class AddToCategory implements CategoryMethods {
 
     public void addToFood() {
         food.addToList("mleko", 24.44);
-        for(double f : food.list.values()) {
-            System.out.println(f);
+        for(String f : food.list.keySet()) {
+            System.out.println(f+ " = " + food.list.get(f));
         }
         System.out.println(food.list);
     }
