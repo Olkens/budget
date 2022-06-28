@@ -4,9 +4,12 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Locale;
 import java.util.Scanner;
+import java.text.DecimalFormat;
+
 
 public class Main {
 
+    private static final DecimalFormat df = new DecimalFormat("0.00");
     public static Scanner sc = new Scanner(System.in).useLocale(Locale.US);
 
     public static float totalIncome;
@@ -16,6 +19,8 @@ public class Main {
     public static String purchaseName;
     public static float price;
     public static float sumOfPrices;
+
+    public static double sum;
 
 
     public static void spacer(){
@@ -120,12 +125,22 @@ public class Main {
         System.out.println("5) All");
         System.out.println("6) Back");
         int categoryInput = sc.nextInt();
-        addToCategory(categoryInput);
+//        AddToCategory.addToCategory(categoryInput); <-- do wykminy
+//
+//        CategoriesList clothes = new CategoriesList();
+//        clothes.addToList("spodnie", 24.44);
+//        clothes.addToList("koszulka", 5.33);
+//
+//        for (double x : clothes.list.values()) {
+//            sum += x;
+//        }
+//        System.out.println(df.format(sum));
+//        food.addToList("mleko", 4.33);
+//        food.ConsoleInfo();
+//        clothes.ConsoleInfo();
     }
 
-    public static void addToCategory(int categoryInput){
 
-    }
 
 
     public static void main(String[] args) {
