@@ -125,7 +125,8 @@ public class Main {
         System.out.println("5) All");
         System.out.println("6) Back");
         int categoryInput = sc.nextInt();
-//        AddToCategory.addToCategory(categoryInput); <-- do wykminy
+        AddToCategory add = new AddToCategory(categoryInput);
+
 //
 //        CategoriesList clothes = new CategoriesList();
 //        clothes.addToList("spodnie", 24.44);
