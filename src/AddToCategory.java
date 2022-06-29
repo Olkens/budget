@@ -6,6 +6,9 @@ public class AddToCategory implements CategoryMethods {
     CategoriesList other = new CategoriesList();
     CategoriesList all = new CategoriesList();
 
+    protected String purchaseName;
+    protected double purchasePrice;
+
     public AddToCategory(int categoryInput) {
         addToCategory(categoryInput);
     }
@@ -13,7 +16,7 @@ public class AddToCategory implements CategoryMethods {
     protected void addToCategory(int categoryInput) {
         switch (categoryInput) {
             case 1:
-                addToFood();
+                addToList(food);
                 break;
             case 2:
                 addToClothes();
@@ -23,20 +26,20 @@ public class AddToCategory implements CategoryMethods {
         }
     }
 
-    public void addToFood() {
-        food.addToList("mleko", 24.44);
+    public void addToList(CategoriesList category) {
+        System.out.println("Enter purchase name:");
+        Main.sc.nextLine();
+        purchaseName = Main.sc.nextLine();
+
+        System.out.println("Enter its price:");
+        purchasePrice = Main.sc.nextDouble();
+
+        category.addToList(purchaseName, purchasePrice);
+        System.out.println("Purchase was added!");
         for (String f : food.list.keySet()) {
             System.out.println(f + " = " + food.list.get(f));
         }
         System.out.println(food.list);
-    }
-
-    protected void addToClothes() {
-        clothes.addToList("spodnie", 4.55);
-        for (String f : clothes.list.keySet()) {
-            System.out.println(f + " = " + clothes.list.get(f));
-        }
-        System.out.println(clothes.list);
     }
 
 }
